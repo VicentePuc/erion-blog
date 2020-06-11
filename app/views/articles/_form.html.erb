@@ -1,22 +1,21 @@
 <% if @article.errors.any? %>
   <h2>the following errors prevented the articles from being saved</h2>
   <ul>
-      <% @articles.errosrs.full_messages.each do |msg| %>
+      <% @articles.errors.full_messages.each do |msg| %>
 
   <li> <%=msg %></li>
   <%end%>
-    <%=msg %>
   </ul>
   <%end%>
 
-<%=form_with scope: :article, url: articles_path, local: true do |f| %>
+<%= form_with(model: @article, local: true) do |f| %>
 <p>
-  <%= f.label :title %></br>
-  <%= f.text_area :title%>
+  <%= f.label :title %><br/>
+  <%= f.text_field :title%>
 </p>
 
 <p>
-  <%= f.label :description %></br>
+  <%= f.label :description %><br/>
   <%= f.text_area :description%>
 </p>
 

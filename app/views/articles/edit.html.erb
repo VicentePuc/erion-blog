@@ -1,33 +1,6 @@
 <h1>Edit articles</h1>
 
 
-<% if @article.errors.any? %>
-  <h2>the following errors prevented the articles from being saved</h2>
-  <ul>
-      <% @articles.errosrs.full_messages.each do |msg| %>
+<%= render 'form' %>
 
-  <li> <%=msg %></li>
-  <%end%>
-    <%=msg %>
-  </ul>
-  <%end%>
-
-<%=form_with(model: @article, local: true)  do |f| %>
-<p>
-  <%= f.label :title %></br>
-  <%= f.text_area :title%>
-</p>
-
-<p>
-  <%= f.label :description %></br>
-  <%= f.text_area :description%>
-</p>
-
-<p>
-    <%=f.submit %>
-</p>
-<%end%>
-
-
-
-<%link_to 'cancel and return to articles listing', articles_path %>
+<%= link_to 'cancel and return to articles listing', articles_path %>

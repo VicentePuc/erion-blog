@@ -1,0 +1,53 @@
+@import 'bootstrap/dist/css/bootstrap';
+
+.navbar {
+background-color: #CD5C5C !important;
+}
+
+.nav-link {
+  color: white !important;
+}
+
+#logo {
+  float: left;
+  font-size: 1.7em;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+#home-container{
+  margin-top: 25px;
+}
+
+.jumbotron{
+  background-image: asset-url('maquina.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 450px;
+}
+
+.jumbotron h1 {
+  color: green;
+}
+
+.jumbotron p {
+  color: green;
+}
+
+html,
+body{
+  height: 150%;
+}
+
+#page-content{
+  flex: 1 0 auto;
+  background-color: lightgrey;
+
+}
+
+#sticky-footer{
+  flex-shrink: none;
+}
